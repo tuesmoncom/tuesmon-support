@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% from "macros/articles.html" import render_article %}
+{% from "macros/categories.html" import render_category_details %}
+
+{% block meta_title %}{{ this.title }}{% endblock %}
+{% block meta_description %}{{ this.body.source|truncate(256, True) }}{% endblock %}
+
+{% block body %}
+    {{ render_category_details(this.parent, show_articles=True, active_article=this._id) }}
+    {{ render_article(this) }}
+{% endblock %}

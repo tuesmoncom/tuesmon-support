@@ -1,0 +1,277 @@
+title: Community Contributions
+---
+body:
+
+Here you will find the projects that are being developed around Tuesmon to improve the ecosystem. If your project is not here, please [contact us](https://manage.tuesmon.com/support/frequently-asked-questions/how-do-i-get-in-in-touch-with-you-or-keep-up-with-the-latest-news/) or make a pull request to our [repo in github](https://github.com/tuesmoncom/tuesmon-support/blob/master/content/misc/community-contributions/contents.lr)
+
+
+## Ansible
+
+### ansible-tuesmon (JScott)
+Ansible for Tuesmon
+- https://github.com/JScott/ansible-tuesmon
+- Justin Scott [@JScott](https://github.com/JScott)
+
+### ansible-tuesmon (Colstrom)
+Ansible Role for Tuesmon
+- https://github.com/colstrom/ansible-tuesmon
+- Chris Olstrom [@colstrom](https://github.com/colstrom)
+
+### tuesmon-deployer
+A deployer tool for Tuesmon.com project - RHEL and CentOS systems.
+- https://github.com/padajuan/tuesmon-deployer
+- Juan Manuel Parrilla [@padajuan](https://github.com/padajuan)
+
+
+## Docker
+
+### tuesmon-docker (ipedrazas)
+Docker scripts to run your own Tuesmon
+- https://github.com/ipedrazas/tuesmon-docker
+- Ivan Pedrazas [@ipedrazas](https://github.com/ipedrazas)
+
+### tuesmon-docker (htdvisser)
+Tuesmon project management platform for Docker
+- https://github.com/htdvisser/tuesmon-docker
+- Hylke Visser [@htdvisser](https://github.com/htdvisser)
+
+### tuesmon-docker (nsdont)
+Tuesmon docker
+- https://github.com/nsdont/tuesmon-docker
+- JinWei,Zhong [@nsdont](https://github.com/nsdont)
+
+### tuesmon-docker (nesv)
+Docker-ization of Tuesmon.com components for self-hosting
+- https://github.com/nesv/tuesmon-docker
+- Nick Saika [@nesv](https://github.com/nesv)
+
+### tuesmon-docker (curiosityio)
+Dockerized Tuesmon.com
+- https://github.com/curiosityio/tuesmon-docker
+- Curiosity IO [@curiosityio](https://github.com/curiosityio)
+
+### fabric8-tuesmon
+Docker images used by fabric8 apps to run a hosted instace of tuesmon.
+- https://github.com/fabric8io/fabric8-tuesmon
+- fabric8 [@fabric8](https://github.com/fabric8io)
+- http://fabric8.io
+
+### zeppelin-tuesmon
+The Docker image for the tuesmon app on CloudFleet HQ
+- https://github.com/cloudfleet/zeppelin-tuesmon
+- cloudfleet [@cloudfleet](https://github.com/cloudfleet)
+- https://cloudfleet.io/
+
+### Tuesmon-Script-Docker
+A docker tuesmon (https://tuesmon.com/) build based on tuesmon-script(https://github.com/tuesmoncom/tuesmon-scripts) -ith no "so many containers I loose my mind" nonsense
+- https://github.com/Annakan/Tuesmon-Script-Docker
+- Annakan [@Annakan](https://github.com/Annakan)
+
+### accollo
+A minimalistic and easily configurable tuesmon.com Docker image.
+- https://github.com/tubia/accollo
+- Tubia [@tubia](https://github.com/tubia/)
+
+### docker-tuesmon
+Docker container for Tuesmon
+- https://github.com/benhutchins/docker-tuesmon
+- Benjamin Hutchins [@benhutchin](https://github.com/benhutchins)
+- https://hub.docker.com/r/benhutchins/tuesmon/
+
+### docker-tuesmon
+Another Docker / Docker Compose config for tuesmon. Every service is containerized using official images.
+- https://github.com/douglasmiranda/docker-tuesmon
+- Douglas Miranda [@douglasmiranda](https://github.com/douglasmiranda)
+
+## Chef
+
+### tuesmon-cookbook
+Installs and configures Tuesmon, a open source agile project management platform.
+- https://github.com/johnbellone/tuesmon-cookbook
+- John Bellone [@johnbellone](https://github.com/johnbellone)
+
+
+## Emacs
+
+### tuesmon-api-emacs
+Tuesmon API client library in Emacs Lisp
+- https://github.com/ryuslash/tuesmon-api-emacs
+- Tom Willemse [@ryuslash](https://github.com/ryuslash)
+
+
+## NODEJS
+
+### tuesmon-njs
+NodeJS Implementation of Tuesmon API
+- https://github.com/sachioross/tuesmon-njs
+- Douglas Ross [@sachioross](https://github.com/sachioross)
+
+### node-tuesmon
+nodejs api wrapper
+- https://github.com/luisrudge/node-tuesmon
+- Luís Rudge [@luisrudge](https://github.com/luisrudge)
+
+
+## Python
+
+### python-tuesmon
+A Python module for communicating with the Tuesmon API
+* https://github.com/nephila/python-tuesmon
+* Nephila [@nephila](https://github.com/nephila)
+
+
+## PHP
+
+### tuesmon-php
+A PHP wrapper for the Tuesmon.com API
+* https://github.com/TZK-/TuesmonPHP
+* TZK- [@TZK-](https://github.com/TZK-)
+
+
+## Migrations
+
+### Trega
+Migrator from Trello to Tuesmon
+- https://github.com/victorliun/trega
+- Victor Liu [@victorliun](https://github.com/victorliun)
+
+
+## Auth Plugins
+
+### tuesmon-contrib-google-auth
+Tuesmon plugin for Google login
+- https://github.com/agolden/tuesmon-contrib-google-auth
+- agolden [@agolden](https://github.com/agolden)
+
+### tuesmon-contrib-fas-openid-auth
+FAS Openid Auth plugin for tuesmon
+- https://github.com/fedora-infra/tuesmon-contrib-fas-openid-auth
+- Fedora Infrastructure [@fedora-infra](https://github.com/fedora-infra)
+
+### tuesmon-contrib-ldap-auth-ext
+Tuesmon plugin for LDAP authentication
+- https://github.com/madmath03/tuesmon-contrib-ldap-auth-ext
+- Monogramm [@Monogramm](https://github.com/Monogramm)
+
+### tuesmon-contrib-kerberos-auth
+Tuesmon plugin for kerberos authentication
+- https://github.com/dpasqualin/tuesmon-contrib-kerberos-auth
+- Diego Giovane Pasqualin [@dpasqualin](https://github.com/dpasqualin)
+
+### tuesmon-contrib-saml-auth
+Tuesmon plugin for SAML authentication
+- https://github.com/jgiannuzzi/tuesmon-contrib-saml-auth
+- Jonathan Giannuzzi [@jgiannuzzi](https://github.com/jgiannuzzi)
+
+### tuesmon-contrib-ad-auth
+Tuesmon plugin for Active Directory authentication
+- https://github.com/stemid/tuesmon-contrib-ad-auth
+- Stefan Midjich [@stemid](https://github.com/stemid)
+
+### tuesmon-contrib-openid-auth
+Tuesmon plugin for Openid/Keycloak authentication
+- https://github.com/robrotheram/tuesmon-contrib-openid-auth
+- Rob Rotheram [@robrotheran](https://github.com/robrotheram)
+
+
+## Dropbox
+
+###tuesmon-contrib-dropbox
+This is a plugin for Tuesmon aiming at letting the user upload files on Dropbox.
+- https://github.com/alexanderstyre/tuesmon-contrib-dropbox
+- alexanderstyre [@alexanderstyre](https://github.com/alexanderstyre)
+
+
+## Dashboard
+
+### tuesmon-dashboard
+Alpha dash for Tuesmon project (Bitergia stats dashboard)
+- https://github.com/acs/tuesmon-dashboard
+- Alvaro del Castillo [@acs](https://github.com/acs/tuesmon-dashboard)
+
+### tuesmon_utils
+A minimal dashboard for Tuesmon
+- https://github.com/robmegna/tuesmon_utils
+- robmegna [@robmegna](https://github.com/robmegna)
+
+### tuesmon-mt
+Tuesmon MT is designed for manager to manage the whole projects in tuesmon.
+- https://github.com/rawbean/tuesmon-mt
+- Robin Zhang [@rawbean](https://github.com/rawbean)\
+
+### forest-guard
+Forest Guard is a Tuesmon dashboard where managers can see what their teammates are working on (tasks and issues)
+- https://github.com/tagip/forest-guard
+- Mika Andrianarijaona [@mikaoelitiana](https://github.com/mikaoelitiana)\
+
+## Mobile
+
+### tuesmon-mobile
+A nifty little app for interacting with Tuesmon (ALPHA version)
+- https://github.com/zach-capalbo/tuesmon-mobile
+- Zachary Capalbo [@zach-capalbo](https://github.com/zach-capalbo)
+
+
+## Estimation
+
+### tuesmon-scrum-poker
+Poker planing with Tuesmon
+- https://github.com/danielbeeke/tuesmon-scrum-poker
+- Daniel Beeke [@danielbeeke](https://github.com/danielbeeke)
+
+### tuesmon-flow
+Strategic planning. Visualize user flows from user stories in Tuesmon and calculate the total estimated points
+- https://github.com/studio-fonkel/tuesmon-flow
+- Studio Fonkel [@studio-fonkel](https://github.com/studio-fonkel)
+
+
+## Themes
+
+### nephila-tuesmon-theme
+Official Nephila's theme for Tuesmon (https://tuesmon.com/)
+- https://github.com/nephila/nephila-tuesmon-theme
+- Nephila [@nephila](https://github.com/nephila)
+
+
+## Documentation
+
+### Tuesmon.pm
+Tutorial on how to use Tuesmon
+- http://tuesmon.pm/
+- TuesmonPM [@TuesmonPM](https://twitter.com/TuesmonPM)
+
+
+## Integrations with Tuesmon
+
+### tuesmon-email
+Mail to Issue pipe for the mail server
+* https://github.com/paultag/tuesmon-email
+* PaulTagliamonte [@paultag](https://github.com/paultag)
+
+### tuesmon-scripts
+A set of bash scripts that interact with the Tuesmon agile project management platform (tuesmon.com)
+* https://github.com/richbl/tuesmon-scripts
+* Rich [@richbl](https://github.com/richbl)
+
+### Tuesmon.com Tasks (for jetbrains)
+* Enable use of tuesmon.com as an IntelliJ task server. (Use with IntelliJ IDEA, RubyMine, WebStorm, PhpStorm, PyCharm, AppCode, MPS, Android Studio, 0xDBE, CLion)
+* https://plugins.jetbrains.com/plugin/7804
+* trevor at busybusy.com [@trevorjones141](https://twitter.com/trevorjones141)
+
+### sentry-tuesmon
+Creates issues in Tuesmon from Sentry exceptions
+* https://github.com/rochsystems/sentry-tuesmon/
+* Roch Systems [@rochsystems](https://github.com/rochsystems)
+
+
+## Hooks
+
+### hooks
+RESTful server that receives hooks from tuesmon.com
+* https://github.com/bedell/hooks
+* bedell [@bedell](https://github.com/bedell)
+
+---
+order: 999
+---
+is_featured: true

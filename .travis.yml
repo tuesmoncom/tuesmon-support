@@ -1,0 +1,19 @@
+language: python
+
+python: 2.7
+node_js: "node"
+
+branches:
+    only:
+        - master
+
+install:
+    - travis_retry pip install -r requirements.txt
+    - . $HOME/.nvm/nvm.sh
+    - nvm install stable
+    - nvm use stable
+    - cd webpack; travis_retry npm install
+
+script:
+    - lektor build -f webpack
+    - lektor deploy ghpages

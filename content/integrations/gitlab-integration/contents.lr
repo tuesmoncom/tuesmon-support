@@ -1,0 +1,60 @@
+title: Gitlab Integration
+---
+body:
+
+*GitLab is an incredibly powerful open source code collaboration platform, git repository manager, issue tracker and code reviewer. It integrates with issue trackers, continuous integration services and its Enterprise Edition has phenomenal LDAP and Active Directory support.*
+
+
+### What can we do currently?
+
+Right now you can connect a GitLab repository with a Tuesmon project and generate a one-way communication (from GitLab to Tuesmon) to:
+
+- *Change the status of an epic, user story, issue, or task in Tuesmon with the commit message*: you may want to read more about this feature in the article ["Changing elements status via commit message"](/integrations/changing-elements-status-via-commit-message/ "Changing elements status via commit message").
+- *Attach commits in an epic, user story, issue, or task of Tuesmon with the commit message*: you may want to read more about this feature in the article ["Attach commits to elements via commit message"](/integrations/attach-commits-to-elements-via-commit-message/ "Attach commits to elements via commit message").
+- *Create issues* on Tuesmon when they are created on GitLab*.
+- *Add comments to the connected issues on Tuesmon when they are created on GitLab*.
+
+In Tuesmon an issue is connected with a GitLab issue if it was created by the GitLab integration. In the detail page of an issue on Tuesmon you can see a link under the subject to the original issue in GitLab.
+
+
+### And what can't we do?
+
+- *Dual synchronization*: currently the integration functionality only allows receiving messages from GitLab. Tuesmon can't communicate with GitLab (the one-way communication is from GitLab to Tuesmon), so changes made in Tuesmon won't be reflected in GitLab.
+- *Show commit links in Tuesmon issues*: If you name a story, task or issue in a commit message (by its reference number) a link to commit won't appear in Tuesmon.
+- "Sync current GitLab issues and comment when the integration module in Tuesmon is enabled*: the integration only works with the future issues and comments added in GitLab.
+
+Currently GitLab offers a limitation on its webhooks system that must be considered. It is not hardcore but it's good to know them to be aware of the limitation that exist.
+
+- GitLab doesn't sign the messages so Tuesmon only can confirm the origin checking the IPs in the request.
+
+!! Integration will always take time so please be patient. If you need a specific integration and you feel ready to get a machete and get into the Tuesmon, please review our [API Docs](http://tuesmoncom.github.io/tuesmon-doc/dist/api.html) and our FAQs about [how you can contribute to Tuesmon](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#propose-some-feature-or-enhancement "How you can contribute?").
+<br /><br />
+If you need help in a specific feature, you can always get in touch with the community and [contact with us](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#sent-us-your-feedback-or-questions "How you contact with us?").
+
+
+### First: Configure the integration module in Tuesmon
+
+1. Go to *Admin > Integrations > GitLab*
+1. Fill *secret key* or use the auto generated one
+2. Copy the *payload URL* input
+4. Optionaly you can define the valid emitter IPs or IP ranges to validate the origin of the requests
+
+![Admin > Integrations > GitLab Panel](gitlab_in_tuesmon.png "Admin > Integrations > GitLab Panel")
+
+
+### Second: Configure Webhooks in your GitLab repository
+
+Go to your repository
+
+1. Click on *Webhooks*
+2. On that screen set the url with the payload url of this screen.
+3. Tuesmon currently listens for two different kind of events from GitLab:
+    1. Push events: changing element status via commit message
+    2. Comments: issue comments created in GitLab appear automatically in Tuesmon
+    3. Issues events: issues created in GitLab appear automatically in Tuesmon
+4.  Click on *"Add Webhook"*
+
+![GitLab Webhook](gitlab_webhook.png "GitLab Webhook")
+
+---
+order: 30

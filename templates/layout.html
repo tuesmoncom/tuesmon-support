@@ -1,0 +1,57 @@
+{% from "macros/nav.html" import render_main_nav_menu %}
+
+<!doctype html>
+<meta charset="utf-8">
+
+<title>{% block meta_title %}Welcome{% endblock %} — Tuesmon Support</title>
+<meta name="description" content="{% block meta_description %}User support pages for Tuesmon, Tuesmon is a project management platform for agile developers & designers and project managers who want a beautiful tool that makes work truly enjoyable.{% endblock %}">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- Style -->
+<link rel="stylesheet" href="{{ '/static/styles.css'|asseturl }}">
+<!-- Google fonts -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!-- Pygment style -->
+<link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}"> <!-- Pygment css-->
+<!-- Javascript -->
+<script type=text/javascript src="{{ '/static/app.js'|asseturl }}" charset="utf-8"></script>
+
+{% block extra_top %}{% endblock %}
+
+<body>
+
+    <header class="header">
+        <div class="header-inside">
+            <a class="main-logo" href="{{ '/'|url }}">
+                <img class="tuesmon-logo" src="{{ '/images/icon-tuesmon-color.png'|asseturl }}" />
+                <h1>TUESMON <span>SUPPORT</span></h1>
+            </a>
+
+            {{ render_main_nav_menu() }}
+        </div>
+    </header>
+
+    <div class="main-search">
+        <form method="get" action="{{ '/search'|url }}">
+            <input class="input-text" type="text" name="q" placeholder="Search in Tuesmon Support pages">
+            <input class="search-button" type="submit" value="Search">
+        </form>
+    </div>
+
+    <div class="content">
+        <div class="content-inside">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inside">
+            <span>&copy; Copyright 2014-2016 Tuesmon Agile LLC.</span>
+
+            {{ render_main_nav_menu() }}
+        </div>
+    </footer>
+
+    {% block extra_down %}{% endblock %}
+</body>

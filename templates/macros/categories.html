@@ -1,0 +1,47 @@
+{% macro render_category(category) %}
+    {% set image = category.attachments.get("icon.svg") %}
+
+    {% if category.children %}
+	<div class="category">
+		<a class="category-link" href="{{ category.children.first()|url }}">
+            {% if image %}
+            <img src="{{ image|url }}" alt="{{ category.name }}" >
+            {% endif %}
+            <span>{{ category.name }}</span>
+        </a>
+        <ul class="category-excerpt">
+            {% for article in category.children.filter(F.is_featured == true) %}
+            <li>
+                <a href="{{ article|url }}">{{ article.title }}</a>
+            </li>
+            {% endfor %}
+            <li class="more">...and more.</li>
+        </ul>
+	</div>
+    {% endif %}
+
+{% endmacro %}
+
+{% macro render_category_details(category, show_articles=none, active_article=none) %}
+    {% if category.children %}
+	<div class="category">
+        <div class="breadcrumb">
+            <a href={{ '/'|url}}>Home</a>
+            ›
+    		<a href="{{ category.children.first()|url }}">{{ category.name }}</a>
+        </div>
+
+        {% if show_articles %}
+        <ul class="articles-list">
+            {% for article in category.children %}
+            <li>
+                <a href="{{ article|url }}" {% if article._id == active_article %} class="active{% endif %}">
+                    {{ article.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+	</div>
+    {% endif %}
+{% endmacro %}

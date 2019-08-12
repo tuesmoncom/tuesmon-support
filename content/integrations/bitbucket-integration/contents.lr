@@ -1,0 +1,59 @@
+title: Bitbucket Integration
+---
+body:
+
+*Bitbucket is a web-based hosting service for projects that use either Mercurial (since the origin) or Git (since October 2011) revision control systems.*
+
+
+### What can we do currently?
+
+Right now you can connect a Bitbucket repository with a Tuesmon project and generate a one-way communication (from Bitbucket to Tuesmon) to:
+
+- *Change the status of an epic, user story, issue, or task in Tuesmon with the commit message*: you may want to read more about this feature in the article ["Changing elements status via commit message"](/integrations/changing-elements-status-via-commit-message/ "Changing elements status via commit message").
+- *Attach commits in an epic, user story, issue, or task of Tuesmon with the commit message*: you may want to read more about this feature in the article ["Attach commits to elements via commit message"](/integrations/attach-commits-to-elements-via-commit-message/ "Attach commits to elements via commit message").
+- *Create issues* on Tuesmon when they are created on Bitbucket*.
+- *Add comments to the connected issues on Tuesmon when they are created on Bitbucket*.
+
+In Tuesmon an issue is connected with a Bitbucket issue if it was created by the Bitbucket integration. In the detail page of an issue on Tuesmon you can see a link under the subject to the original issue in Bitbucket.
+
+
+### And what can't we do?
+
+- *Dual synchronization*: currently the integration functionality only allows receiving messages from Bitbucket. Tuesmon can't communicate with Bitbucket (the one-way communication is from Bitbucket to Tuesmon), so changes made in Tuesmon won't be reflected in Bitbucket.
+- *Show commit links in Tuesmon issues*: If you name a story, task or issue in a commit message (by its reference number) a link to commit not appear in Tuesmon.
+- "Sync current Bitbucket issues and comment when the integration module in Tuesmon is enabled*: the integration only works with the future issues and comments added in Bitbucket.
+
+Currently Bitbucket offers some limitations on its webhooks system that must be considered. These limitations are not hardcore but it's good to know them to be aware of the limitations that exist.
+
+- Bitbucket doesn't sign the messages so Tuesmon only can confirm the origin checking the IPs in the request. Bitbucket can change their [IP ranges](https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html#Managewebhooks-trigger_webhookTriggeringwebhooks "Bitbucket IP ranges") of their servers when they want so with every change you have to update your configuration in Tuesmon to prevent errors.
+- Webhooks messages can only contains a maximum of 5 commits (up to 5 of the most recent commits pushed) according to the [Bitbucket documentation](https://confluence.atlassian.com/bitbucket/event-payloads-740262817.html#EventPayloads-Push "iDocumentation: Event Payloads - Repository Events: Push").
+
+!! Integration will always take time so please be patient. If you need a specific integration and you feel ready to get a machete and get into the Tuesmon, please review our [API Docs](http://tuesmoncom.github.io/tuesmon-doc/dist/api.html) and our FAQs about [how you can contribute to Tuesmon](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#propose-some-feature-or-enhancement "How you can contribute?").
+<br /><br />
+If you need help in a specific feature, you can always get in touch with the community and [contact with us](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#sent-us-your-feedback-or-questions "How you contact with us?").
+
+
+### First: Configure the integration module in Tuesmon
+
+1. Go to *Admin > Integrations > Bitbucket*
+2. Fill *secret key* or use the auto generated one
+3. Copy the Payload URL field.
+4. Optionaly you can define the valid emitter IPs or IP ranges to validate the origin of the requests. You can find the valid IP ranges for the Bitbucked Cloud service [here](https://confluence.atlassian.com/bitbucket/manage-webhooks-735643732.html#Managewebhooks-trigger_webhookTriggeringwebhooks "Bitbucket IP ranges")
+
+![Admin > Integrations > Bitbucket Panel](bitbucket_in_tuesmon.png "Admin > Integrations > Bitbucket Panel")
+
+### Second: Configure Webhooks in your Bitbucket repository
+
+1. Click on *Settings > Webhooks*
+2. Click on *"Add webhook"* button
+2. On that form set the url with the *payload url* of this screen and choose some title (ex. "Tuesmon.com").
+3. Tuesmon listens for three different triggers, you can select all of them or just some:
+    - *Repository - Push*: Changing element status via commit message
+    - *Issue - Created*: To clone new issues created in Bitbucket to Tuesmon
+    - *Issue - Comment created*: To add new comments to related issues
+4. Press *Save* button to create the new webhook
+
+![Bitbucket Webhooks](bitbucket_webhook.png "Bitbucket Webhook")
+
+---
+order: 40

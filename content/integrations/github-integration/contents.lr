@@ -1,0 +1,62 @@
+title: GitHub Integration
+---
+body:
+
+*GitHub is the largest code host on the planet with over 17.5 million repositories. These repositories are open to the community for public projects and secure for private ones.*
+
+
+### What can we do currently?
+
+Right now you can connect to a GitHub repository with a Tuesmon project and generate a one-way communication (from GitHub to Tuesmon) to:
+
+- *Change the status of an epic, user story, issue, or task in Tuesmon with the commit message*: you may want to read more about this feature in the article ["Changing elements status via commit message"](/integrations/changing-elements-status-via-commit-message/ "Changing elements status via commit message").
+- *Attach commits in an epic, user story, issue, or task of Tuesmon with the commit message*: you may want to read more about this feature in the article ["Attach commits to elements via commit message"](/integrations/attach-commits-to-elements-via-commit-message/ "Attach commits to elements via commit message").
+- *Create issues* on Tuesmon when they are created on GitHub*.
+- *Add comments to the connected issues on Tuesmon when they are created on GitHub*.
+
+In Tuesmon an issue is connected with a GitHub issue if it was created by the GitHub integration. In the detail page of an issue on Tuesmon you can see a link under the subject to the original issue in GitHub.
+
+
+### And what can't we do?
+
+- *Dual synchronization*: currently the integration functionality only allows receiving messages from GitHub. Tuesmon can't communicate with GitHub (the one-way communication is from Github to Tuesmon), so changes made in Tuesmon won't be reflected in GitHub.
+- *Show commit links in Tuesmon issues*: If you name a story, task or issue in a commit message (by its reference number) a link to commit won't appear in Tuesmon.
+- "Sync current GitHub issues and comment when the integration module in Tuesmon is enabled*: the integration only works with the future issues and comments added in GitHub.
+
+!! Integration will always take time so please be patient. If you need a specific integration and you feel ready to get a machete and get into the Tuesmon, please review our [API Docs](http://tuesmoncom.github.io/tuesmon-doc/dist/api.html) and our FAQs about [how you can contribute to Tuesmon](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#propose-some-feature-or-enhancement "How you can contribute?").
+<br /><br />
+If you need help in a specific feature, you can always get in touch with the community and [contact with us](/frequently-asked-questions/how-can-i-contribute-to-tuesmon/#sent-us-your-feedback-or-questions "How you contact with us?").
+
+### First: Configure the integration module in Tuesmon
+
+1. Go to *Admin > Integrations > GitHub*
+2. Fill *secret key* or use the auto generated one
+2. Copy the *payload URL* input
+
+![Admin > Integrations > GitHub Panel](github_in_tuesmon.png "Admin > Integrations > GitHub Panel")
+
+
+### Second: Configure Webhooks in your GitHub repository
+
+!!! Be careful if you use *organization webhooks* instead of *repository webhooks* because the first emit calls for events in all of the repositories and the second only in one of them.
+
+1. Click on *Settings > Webhooks & Services > Add webhook*
+2. On that screen set the *payload url* with the *payload url* from Tuesmon
+3. The *secret key* must be filled with the same content as the *secret key* from Tuesmon
+4. Content type must be *application/json*.
+5. Tuesmon currently listens for three different kind of *events*. Just check *"send me everything"* or the events you want Tuesmon to listen for.
+      1. *Push events*: changing element status via commit message
+      2. *Issues*: issues created in GitHub appear automatically in Tuesmon
+      3. *Issue comment*: issue comments created in GitHub appear automatically in Tuesmon
+6. Press *Add webhook* button to create the new webhook
+
+![GitHub Webhooks](github_webhook.png "GitHub Webhooks")
+
+Here you can find a video describing the whole process:
+
+<iframe width="100%" height="480" src="https://www.youtube.com/embed/KwrwpDsGt78" frameborder="0" allowfullscreen></iframe>
+
+---
+order: 20
+---
+is_featured: true

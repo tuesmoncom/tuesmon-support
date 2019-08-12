@@ -1,0 +1,42 @@
+title: How do I get in In touch with you, or keep up with the Latest News?
+---
+body:
+
+*Tuesmon is growing fast and you may wonder how best to reach the right Tuesmon team member to deal with your request. Here are the best channels:*
+
+
+### I have a question and can't find it in your Support Pages
+
+Tuesmon has an active community, and others may have the same issue you have, or may have resolved it already. We set up a **mailing list** on Google Groups: [mailing list](https://groups.google.com/forum/#!forum/tuesmoncom)
+
+If you have a question or issue that you wish to address privately, send us **an email** and we will answer you as soon as possible. We have an internal rule that no query go unaddressed for longer than 24 hours. We are usually way faster than that. Email us at **[support@tuesmon.com](mailto:support@tuesmon.com "Send mail to support@tuesmon.com")**
+
+
+### I think I found a bug on Tuesmon
+
+Oh, thanks! We were looking for it but you found it first. Please, report it in our [github issues](https://github.com/tuesmoncom/tuesmon-front/issues). Your issue feeds straight in to our Issues list on our own [Tuesmon Project](https://manage.tuesmon.com/project/tuesmon/ "See the Tuesmon project in tuesmon.com"). This gets our immediate attention and will wake people up if they're sleeping (on the job or otherwise). A team member will be in touch. We will hunt and kill the bug relentlessly. It's nice to feel safe in the Tuesmon.
+
+
+### I want to know what's new with Tuesmon
+
+We are continuously delivering new features and improvements. There are two ways to stay current with the new features and bugfixes:
+
+- We post updates on our **[blog](https://blog.tuesmon.com "Visit our blog")** on the [announcements section](https://blog.tuesmon.com/category/announcements.html "Blog > Announcements")
+- We have a **Changelog** file in our repo with every version. In [front](https://github.com/tuesmoncom/tuesmon-front/blob/master/CHANGELOG.md) and [back](https://github.com/tuesmoncom/tuesmon-back/blob/master/CHANGELOG.md)
+- We tweet these changes as well in our **twitter account** [@tuesmoncom](https://twitter.com/tuesmoncom) Please Follow us!
+
+
+### I want to dive into your code
+
+Great! Join the Tuesmon adventure. But be careful, the Tuesmon is a thick forest, sometimes very dense and occasionally dangerous. It's easy to get lost. But if you are an expert we want you as part of the team.
+
+Join the Tuesmon development community. Here are three points of departure:
+
+- Check our [Tuesmon repo in github](https://github.com/tuesmoncom)
+- Tuesmon is well [documented](http://tuesmoncom.github.io/tuesmon-doc/dist/) so you can easily start playing with it
+- Our [API](http://tuesmoncom.github.io/tuesmon-doc/dist/api.html) is extensive and well organized. Adapt Tuesmon to your own needs.
+
+---
+order: 30
+---
+is_featured: true
